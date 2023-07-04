@@ -1,12 +1,18 @@
 package practice.day2;
 
-import java.util.Scanner;
+import java.util.*;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
+    public static int sum(int[] array){
+        int sum = 0;
+        for (int i = 0; i < array.length; i++){
+            sum = sum + array[i];
+        }
+return sum;
+    }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         System.out.println("Enter username: ");
         String username = input.nextLine();
 
@@ -58,9 +64,45 @@ public class Main {
         for (int i = 0; i < days.length; i++){
             System.out.println(days[i]);
         }
+*/
+
+//Homework
+        //zad 1
+        String[] words = {"Аватар", "алфа", "беда", "бреза", "салон"};
+        for (String word : words){
+            if (word.charAt(0) == 'а' || word.charAt(0) == 'А')
+                System.out.println(word);
+        }
+
+        //zad 2
+        Scanner num = new Scanner(System.in);
+        System.out.println("Enter numbers: ");
+        int[] array = new int[5];
+        for (int i = 0; i < array.length; i++){
+            array[i] = num.nextInt();
+        }
+        System.out.println("Sum is " + sum(array));
 
 
-
+        //zad 3
+        ArrayList<String> list = new ArrayList<>();
+        int n = 1;
+        while(n <= 4){
+            Scanner scann = new Scanner(System.in);
+            System.out.println("Enter word: ");
+            list.add(scann.nextLine());
+            n++;
+        }
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).length() <= 4)
+                list.remove(i--);
+        }
+        System.out.println("Remaining words are: ");
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
 
         }
+
+
     }
