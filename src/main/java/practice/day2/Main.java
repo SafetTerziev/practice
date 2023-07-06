@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Main {
-    public static int sum(int[] array){
+    public static int sum(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++){
             sum = sum + array[i];
@@ -69,7 +69,7 @@ return sum;
 //Homework
         //zad 1
         String[] words = {"Аватар", "алфа", "беда", "бреза", "салон"};
-        for (String word : words){
+        for (String word : words) {
             if (word.charAt(0) == 'а' || word.charAt(0) == 'А')
                 System.out.println(word);
         }
@@ -78,7 +78,7 @@ return sum;
         Scanner num = new Scanner(System.in);
         System.out.println("Enter numbers: ");
         int[] array = new int[5];
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             array[i] = num.nextInt();
         }
         System.out.println("Sum is " + sum(array));
@@ -87,18 +87,18 @@ return sum;
         //zad 3
         ArrayList<String> list = new ArrayList<>();
         int n = 1;
-        while(n <= 4){
+        while(n <= 4) {
             Scanner scann = new Scanner(System.in);
             System.out.println("Enter word: ");
             list.add(scann.nextLine());
             n++;
         }
-        for (int i = 0; i < list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             if (list.get(i).length() <= 4)
                 list.remove(i--);
         }
         System.out.println("Remaining words are: ");
-        for (int i = 0; i < list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
 
