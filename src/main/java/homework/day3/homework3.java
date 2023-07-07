@@ -2,28 +2,30 @@ package homework.day3;
 
 import java.util.Scanner;
 
-public class homework3 {
-    public static int exercise1(int f, int s, int th){
+public class homework3
+
+{
+    public static int getMin(int f, int s, int th){
         int min = f;
 
         if (min > s)
             min = s;
 
-        if (min > th)
+        else if (min > th)
             min = th;
 
         return min;
     }
-    public static void exercise2(int number){
+    public static void EvenOrOdd(int number){
 
         if (number % 2 == 0)
             System.out.println("true");
-
         else if (number % 2 != 0)
             System.out.println("false");
 
 
     }
+
     public static void main(String[] args) {
         //Homework day 3
         //zad 1
