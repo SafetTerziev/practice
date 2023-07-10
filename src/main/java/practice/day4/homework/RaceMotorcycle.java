@@ -1,7 +1,7 @@
 package practice.day4.homework;
 
 public class RaceMotorcycle extends Vehicle {
-    final static double DEFAULT_FUEL_CONSUMPTION = 8;
+    private final static double DEFAULT_FUEL_CONSUMPTION = 8;
 
     public RaceMotorcycle(double fuel, int horsePower) {
         super(fuel, horsePower);

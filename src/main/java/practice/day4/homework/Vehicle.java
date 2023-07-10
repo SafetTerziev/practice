@@ -1,7 +1,7 @@
 package practice.day4.homework;
 
 public class Vehicle {
-    final static double DEFAULT_FUEL_CONSUMPTION = 1.25;
+    private final static double DEFAULT_FUEL_CONSUMPTION = 1.25;
     private double fuelConsumption;
     private double fuel;
     private int horsePower;
@@ -11,7 +11,7 @@ public class Vehicle {
     }
 
     public void setFuelConsumption(double fuelConsumption) {
-        if (this.fuelConsumption < 0){
+        if (this.fuelConsumption < 0) {
             throw new IllegalArgumentException("Wrong data!");
         }
         this.fuelConsumption = fuelConsumption;
@@ -22,7 +22,7 @@ public class Vehicle {
     }
 
     public void setFuel(double fuel) {
-        if (this.fuel < 0){
+        if (this.fuel < 0) {
             throw new IllegalArgumentException("Wrong data!");
         }
         this.fuel = fuel;
@@ -33,12 +33,13 @@ public class Vehicle {
     }
 
     public void setHorsePower(int horsePower) {
-        if (this.horsePower < 50){
+        if (this.horsePower < 50) {
             throw new IllegalArgumentException("Wrong data!");
         }
         this.horsePower = horsePower;
     }
-    public Vehicle(double fuel, int horsePower){
+
+    public Vehicle(double fuel, int horsePower) {
         this.fuel = fuel;
         this.horsePower = horsePower;
         this.fuelConsumption = DEFAULT_FUEL_CONSUMPTION;
