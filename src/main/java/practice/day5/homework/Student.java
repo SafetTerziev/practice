@@ -1,15 +1,17 @@
 package practice.day5.homework;
 
+import java.util.ArrayList;
+
 public class Student extends Person {
     private int clas;
     private int numberInClass;
-    private double[] subjectGrade;
+    private ArrayList<GradesForSubjects> gradesForSubjects;
 
-    public Student(String name, String gender, int id, int clas, int numberInClass, double[] subjectGrade) {
+    public Student(String name, String gender, int id, int clas, int numberInClass, ArrayList<GradesForSubjects> gradesForSubjects) {
         super(name, gender, id);
         this.clas = clas;
         this.numberInClass = numberInClass;
-        this.subjectGrade = subjectGrade;
+        this.gradesForSubjects = gradesForSubjects;
     }
 
     public int getClas() {
@@ -20,8 +22,8 @@ public class Student extends Person {
         return numberInClass;
     }
 
-    public double[] getSubjectGrade() {
-        return subjectGrade;
+    public ArrayList<GradesForSubjects> getGradesForSubjects() {
+        return gradesForSubjects;
     }
 
     public void setClas(int clas) {
@@ -32,7 +34,9 @@ public class Student extends Person {
         this.numberInClass = numberInClass;
     }
 
-    public void setSubjectGrade(double[] subjectGrade) {
-        this.subjectGrade = subjectGrade;
+    public void setGradesForSubjects(ArrayList<GradesForSubjects> gradesForSubjects) {
+        this.gradesForSubjects = gradesForSubjects;
     }
+
+
 }
