@@ -29,10 +29,10 @@ public class homework {
         school.printTeachersInfo();
 
         String subject = "English";
-        Student studentWithHighestGrade = school.findStudentsHighestGrade(subject);
+        Student studentWithHighestGrade = school.studentsHighestGrade(subject);
         System.out.println("Student with the highest grade in "+subject +": "+studentWithHighestGrade.getName());
 
-        Student studentWithLowestGrade = school.findStudentsLowestGrade(subject);
+        Student studentWithLowestGrade = school.studentsLowestGrade(subject);
         System.out.println("Student with the lowest grade in "+subject +": "+studentWithLowestGrade.getName());
 
         double averageSalary = school.averageSalary();
