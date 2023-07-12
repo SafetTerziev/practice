@@ -20,6 +20,11 @@ public class School {
         teachers.add(teacher);
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public void printStudentsInfo() {
         System.out.println("Students: ");
         for (Student student : students) {
@@ -34,33 +39,33 @@ public class School {
         }
     }
 
-    public Student findStudentsHighestGrade(String subject) {
-        Student findStudentsHighestGrade = null;
+    public Student studentsHighestGrade(String subject) {
+        Student studentsHighestGrade = null;
         double highestGrade = 0;
 
         for (Student student : students) {
             int grade = student.getGrade(subject);
-            if (grade != -1 && (findStudentsHighestGrade == null || grade > highestGrade)) {
+            if (grade != -1 && (studentsHighestGrade == null || grade > highestGrade)) {
                 highestGrade = grade;
-                findStudentsHighestGrade = student;
+                studentsHighestGrade = student;
             }
         }
-        return findStudentsHighestGrade;
+        return studentsHighestGrade;
     }
 
-    public Student findStudentsLowestGrade(String subject) {
-        Student findStudentWithLowestGrade = null;
+    public Student studentsLowestGrade(String subject) {
+        Student studentWithLowestGrade = null;
         int lowestGrade = 6;
 
         for (Student student : students) {
             int grade = student.getGrade(subject);
             if (grade != -1 && grade < lowestGrade) {
                 lowestGrade = grade;
-                findStudentWithLowestGrade = student;
+                studentWithLowestGrade = student;
             }
         }
 
-        return findStudentWithLowestGrade;
+        return studentWithLowestGrade;
     }
 
     public double averageSalary() {
