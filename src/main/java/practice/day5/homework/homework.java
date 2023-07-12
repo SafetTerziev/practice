@@ -50,9 +50,5 @@ public class homework {
 
         Teacher teacherWithHighestGrades = school.teacherWithHighestGrades();
         System.out.println("Teacher signing the highest grades: "+teacherWithHighestGrades.getName());
-
-
-
-
     }
 }
