@@ -29,30 +29,26 @@ public class homework {
         school.printTeachersInfo();
 
         String subject = "English";
-        Student studentWithHighestGrade = school.studentsHighestGrade(subject);
+        Student studentWithHighestGrade = school.findStudentsHighestGrade(subject);
         System.out.println("Student with the highest grade in "+subject +": "+studentWithHighestGrade.getName());
 
-        Student studentWithLowestGrade = school.studentsLowestGrade(subject);
+        Student studentWithLowestGrade = school.findStudentsLowestGrade(subject);
         System.out.println("Student with the lowest grade in "+subject +": "+studentWithLowestGrade.getName());
 
-        double averageSalary = school.averageSalary();
+        double averageSalary = school.calculateAverageSalary();
         System.out.println("Average salary: "+averageSalary);
 
         Student student = student1;
-        double averageGradeOfStudent = school.averageGradeOfStudent(student);
+        double averageGradeOfStudent = school.calculateAverageGradeOfStudent(student);
         System.out.println("Average grade of "+student.getName()+": "+averageGradeOfStudent);
 
-        double classAverageGrade = school.classAverageGrade();
+        double classAverageGrade = school.findClassAverageGrade();
         System.out.println("Class average grade: "+classAverageGrade);
 
-        String subjectWithHighestGrade = school.subjectWithHighestGrade(student);
+        String subjectWithHighestGrade = school.findSubjectWithHighestGrade(student);
         System.out.println("Subject with the highest grade for "+student.getName()+": "+subjectWithHighestGrade);
 
-        Teacher teacherWithHighestGrades = school.teacherWithHighestGrades();
+        Teacher teacherWithHighestGrades = school.findTeacherWithHighestGrades();
         System.out.println("Teacher signing the highest grades: "+teacherWithHighestGrades.getName());
-
-
-
-
     }
 }

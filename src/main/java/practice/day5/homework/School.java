@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class School {
+
     private ArrayList<Student> students;
     private ArrayList<Teacher> teachers;
 
@@ -20,11 +21,6 @@ public class School {
         teachers.add(teacher);
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     public void printStudentsInfo() {
         System.out.println("Students: ");
         for (Student student : students) {
@@ -39,7 +35,7 @@ public class School {
         }
     }
 
-    public Student studentsHighestGrade(String subject) {
+    public Student findStudentsHighestGrade(String subject) {
         Student studentsHighestGrade = null;
         double highestGrade = 0;
 
@@ -53,7 +49,7 @@ public class School {
         return studentsHighestGrade;
     }
 
-    public Student studentsLowestGrade(String subject) {
+    public Student findStudentsLowestGrade(String subject) {
         Student studentWithLowestGrade = null;
         int lowestGrade = 6;
 
@@ -68,7 +64,7 @@ public class School {
         return studentWithLowestGrade;
     }
 
-    public double averageSalary() {
+    public double calculateAverageSalary() {
         double totalSalary = 0;
         for (Teacher teacher : teachers) {
             totalSalary += teacher.getSalary();
@@ -76,7 +72,7 @@ public class School {
         return totalSalary / teachers.size();
     }
 
-    public double averageGradeOfStudent(Student student) {
+    public double calculateAverageGradeOfStudent(Student student) {
         int totalGrades = 0;
         int numSubjects = student.getSubjects().size();
 
@@ -92,18 +88,18 @@ public class School {
         return numSubjects != 0 ? (double) totalGrades / numSubjects : 0;
     }
 
-    public double classAverageGrade() {
+    public double findClassAverageGrade() {
         double totalGrades = 0;
         int numStudents = students.size();
 
         for (Student student : students) {
-            totalGrades += averageGradeOfStudent(student);
+            totalGrades += calculateAverageGradeOfStudent(student);
         }
 
         return numStudents != 0 ? totalGrades / numStudents : 0;
     }
 
-    public String subjectWithHighestGrade(Student student) {
+    public String findSubjectWithHighestGrade(Student student) {
         String subjectWithHighestGrade = null;
         int highestGrade = 2;
 
@@ -118,7 +114,7 @@ public class School {
         return subjectWithHighestGrade;
     }
 
-    public Teacher teacherWithHighestGrades() {
+    public Teacher findTeacherWithHighestGrades() {
         Teacher teacherWithHighestGrades = null;
         int highestGradesCount = -1;
 
