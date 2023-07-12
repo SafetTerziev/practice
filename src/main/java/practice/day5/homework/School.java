@@ -11,33 +11,34 @@ public class School {
         this.students = new ArrayList<>();
         this.teachers = new ArrayList<>();
     }
+
     public void addStudent(Student student) {
         students.add(student);
     }
+
     public void addTeacher(Teacher teacher) {
         teachers.add(teacher);
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public void printStudentsInfo() {
         System.out.println("Students: ");
         for (Student student : students) {
-            System.out.println("Name: " + student.getName());
-            System.out.println("Gender: " + student.getGender());
-            System.out.println("ID: " + student.getId());
-            System.out.println("Class: " + student.getClas());
-            System.out.println("Number in class: " + student.getNumberInClass());
+            System.out.println(student);
         }
     }
+
     public void printTeachersInfo() {
         System.out.println("Teachers: ");
         for (Teacher teacher : teachers) {
-            System.out.println("Name: " + teacher.getName());
-            System.out.println("Gender: " + teacher.getGender());
-            System.out.println("ID: " + teacher.getId());
-            System.out.println("School: " + teacher.getSchool());
-            System.out.println("Subject: " + teacher.getSubjects());
-            System.out.println("Salary: " + teacher.getSalary());
+            System.out.println(teacher);
         }
     }
+
     public Student studentsHighestGrade(String subject) {
         Student studentsHighestGrade = null;
         double highestGrade = 0;
@@ -74,6 +75,7 @@ public class School {
         }
         return totalSalary / teachers.size();
     }
+
     public double averageGradeOfStudent(Student student) {
         int totalGrades = 0;
         int numSubjects = student.getSubjects().size();
@@ -89,6 +91,7 @@ public class School {
 
         return numSubjects != 0 ? (double) totalGrades / numSubjects : 0;
     }
+
     public double classAverageGrade() {
         double totalGrades = 0;
         int numStudents = students.size();

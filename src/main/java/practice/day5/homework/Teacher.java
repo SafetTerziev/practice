@@ -37,4 +37,9 @@ public class Teacher extends Person {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    public String toString() {
+        return super.toString() + " " + school + " " + subjects + " " + salary;
+    }
+
 }

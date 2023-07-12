@@ -24,6 +24,7 @@ public class Student extends Person {
     public int getGrade(String subject) {
         return gradesPerSubject.getOrDefault(subject, -1);
     }
+
     public int getClas() {
         return clas;
     }
@@ -44,13 +45,16 @@ public class Student extends Person {
         return new ArrayList<>(gradesPerSubject.keySet());
     }
 
-
     public void setClas(int clas) {
         this.clas = clas;
     }
 
     public void setNumberInClass(int numberInClass) {
         this.numberInClass = numberInClass;
+    }
+
+    public String toString() {
+        return super.toString() + " " + clas + " " + numberInClass + " " + gradesPerSubject;
     }
 
 
