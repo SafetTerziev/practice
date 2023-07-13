@@ -6,9 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 public class Student extends Person {
+
     private int clas;
+
     private int numberInClass;
+
     private Map<String, Integer> gradesPerSubject;
+
 
     public Student(String name, String gender, int id, int clas, int numberInClass) {
         super(name, gender, id);
@@ -56,6 +60,4 @@ public class Student extends Person {
     public String toString() {
         return super.toString() + " " + clas + " " + numberInClass + " " + gradesPerSubject;
     }
-
-
 }
