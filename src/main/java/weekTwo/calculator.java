@@ -51,7 +51,4 @@ public class calculator {
         }
         return result;
     }
-
-
-
 }
