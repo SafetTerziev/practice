@@ -5,8 +5,11 @@ import java.util.List;
 public class Teacher extends Person {
 
     private String school;
+
     private List<String> subjects;
+
     private double salary;
+
     public Teacher(String name, String gender, int id, String school, List<String> subjects, double salary) {
         super(name, gender, id);
         this.school = school;

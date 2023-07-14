@@ -65,38 +65,38 @@ public class School {
     }
 
     public double calculateAverageSalary() {
-        double totalSalary = 0;
+        double sumSalary = 0;
         for (Teacher teacher : teachers) {
-            totalSalary += teacher.getSalary();
+             sumSalary += teacher.getSalary();
         }
-        return totalSalary / teachers.size();
+        return sumSalary / teachers.size();
     }
 
     public double calculateAverageGradeOfStudent(Student student) {
         int totalGrades = 0;
-        int numSubjects = student.getSubjects().size();
+        int numberOfSubjects = student.getSubjects().size();
 
         for (String subject : student.getSubjects()) {
             int grade = student.getGrade(subject);
             if (grade != -1) {
                 totalGrades += grade;
             } else {
-                numSubjects--;
+                numberOfSubjects--;
             }
         }
 
-        return numSubjects != 0 ? (double) totalGrades / numSubjects : 0;
+        return numberOfSubjects != 0 ? (double) totalGrades / numberOfSubjects : 0;
     }
 
     public double findClassAverageGrade() {
         double totalGrades = 0;
-        int numStudents = students.size();
+        int numberOfStudents = students.size();
 
         for (Student student : students) {
             totalGrades += calculateAverageGradeOfStudent(student);
         }
 
-        return numStudents != 0 ? totalGrades / numStudents : 0;
+        return numberOfStudents != 0 ? totalGrades / numberOfStudents : 0;
     }
 
     public String findSubjectWithHighestGrade(Student student) {
